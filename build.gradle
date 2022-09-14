@@ -7,6 +7,13 @@ buildscript {
             url 'https://maven.google.com/'
             name 'Google'
         }
+        mavenCentral()
+        maven {
+            url = uri("https://maven.pkg.jetbrains.space/public/p/ktor/eap")
+        }
+        maven {
+            url = uri("https://maven.pkg.jetbrains.space/kotlin/p/kotlin/dev")
+        }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.5.1'
@@ -17,6 +24,7 @@ buildscript {
 
 allprojects {
     repositories {
+        maven { url 'https://jitpack.io' }
 //        maven(){
 //            url "https://dl.bintray.com/auteloss/android"
 //        }

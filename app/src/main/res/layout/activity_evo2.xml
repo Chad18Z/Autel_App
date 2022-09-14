@@ -195,16 +195,17 @@
                     android:gravity="center"
                     android:padding="@dimen/text_padding"
                     android:text="RTK" />
+
                 <TextView
                     android:id="@+id/tvPush"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/common_5dp"
                     android:layout_weight="1"
                     android:background="@drawable/text_background"
                     android:gravity="center"
-                    android:layout_marginStart="@dimen/common_5dp"
                     android:padding="@dimen/text_padding"
-                    android:text="直播推流示例" />
+                    android:text="Live Push" />
             </LinearLayout>
 
             <LinearLayout

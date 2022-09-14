@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/AutelDroneApp/app/src/main/res/layout/ac_camera.xml" value="0.4453125" />
+        <entry key="..\:/AutelDroneApp/app/src/main/res/layout/ac_camera_base.xml" value="0.4003623188405797" />
+        <entry key="..\:/AutelDroneApp/app/src/main/res/layout/ac_codec.xml" value="0.4003623188405797" />
+        <entry key="..\:/AutelDroneApp/app/src/main/res/layout/ac_codecview.xml" value="0.4003623188405797" />
+        <entry key="..\:/AutelDroneApp/app/src/main/res/layout/activity_evo2.xml" value="0.5" />
+      </map>
+    </option>
+  </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
 </project>

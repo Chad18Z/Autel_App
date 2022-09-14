@@ -1,6 +1,7 @@
 package com.autel.sdksample.base;
 
 import android.os.Bundle;
+import android.os.Environment;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -16,8 +17,10 @@ import com.autel.sdk.video.AutelCodecListener;
 import com.autel.sdk.widget.AutelCodecView;
 import com.autel.sdksample.R;
 
-public class CodecActivity extends BaseActivity<AutelCodec> {
+import java.io.IOException;
 
+public class CodecActivity extends BaseActivity<AutelCodec> {
+    
     private RelativeLayout content_layout;
     private boolean isCodecing;
 
@@ -43,10 +46,6 @@ public class CodecActivity extends BaseActivity<AutelCodec> {
 
         isCodecing = false;
         initClick();
-    }
-
-    public void testAutelCodecView(View v) {
-
     }
 
     /**
@@ -98,6 +97,7 @@ public class CodecActivity extends BaseActivity<AutelCodec> {
                 btn_checkOverExposureEnabled.setText("isOverExposureEnabled");
                 btn_checkOverExposureEnabled.setAllCaps(false);
                 btn_checkOverExposureEnabled.setOnClickListener(new View.OnClickListener() {
+
                     @Override
                     public void onClick(View view) {
                         Toast.makeText(CodecActivity.this, "isOverExposureEnabled == " + autelCodecView.isOverExposureEnabled(), Toast.LENGTH_SHORT).show();
@@ -126,13 +126,14 @@ public class CodecActivity extends BaseActivity<AutelCodec> {
                 content_layout.setOnClickListener(null);
                 content_layout.setVisibility(View.VISIBLE);
                 content_layout.addView(autelCodecView);
+
                 if (null != mController) {
                     mController.setCodecListener(new AutelCodecListener() {
                         @Override
                         public void onFrameStream(final byte[] videoBuffer, final boolean isIFrame, final int size, final long pts) {
                             Log.d("onFrameStream"," onFrameStream size "+size);
                             if(null == videoBuffer) return;
-                            logOut("isValid == " + (videoBuffer.length == size) + "\nisIFrame == " + isIFrame + "\nsize == " + size + "\npts == " + pts);
+                            logOut("isValid == " + (videoBuffer.length == size) + "\nisIFrame == " + isIFrame + "\nsize == " + size + "\npts == " + pts + "\nresult == ");
                         }
 
                         @Override
@@ -140,7 +141,7 @@ public class CodecActivity extends BaseActivity<AutelCodec> {
 //                            logTV.post(new Runnable() {
 //                                @Override
 //                                public void run() {
-                                    logOut("onCandeled");
+                                    logOut("onCanceled");
 //                                }
 //                            });
                         }
